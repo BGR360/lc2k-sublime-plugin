@@ -1,0 +1,126 @@
+%YAML 1.2
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: LC-2K
+file_extensions: [as, ass, lc2k, lc]
+scope: source.lc2k
+
+variables:
+  identifier: "[A-Za-z_][A-Za-z_0-9]*"
+  number: "\\d+"
+  reg: "[0-7]"
+  spc: "[^\\S\\n]+"
+contexts:
+  main:
+    - match: "\\b(add|nor)"
+      scope: keyword.control.instruction.lc2k
+      push: rtype_instruction
+    - match: "\\b(lw|sw|beq)"
+      scope: keyword.control.instruction.lc2k
+      push: itype_instruction
+    - match: "\\b(jalr)"
+      scope: keyword.control.instruction.lc2k
+      push: jtype_instruction
+    - match: "\\b(halt|noop)"
+      scope: keyword.control.instruction.lc2k
+      push: otype_instruction
+    - match: "\\.fill"
+      scope: keyword.control.directive.lc2k
+      push: fill
+    - include: label
+  register:
+    - match: "\\b{{reg}}\\b"
+      scope: variable.parameter.reg.lc2k
+  number:
+    - match: "(\\b{{number}}\\b|-{{number}}\\b)"
+      scope: constant.numeric.lc2k
+  label:
+    - match: "\\b{{identifier}}\\b"
+      scope: support.function.label.lc2k
+  comment:
+    - meta_scope: comment.line.lc2k
+    - match: \n
+      pop: true
+  rtype_instruction:
+    - match: "{{spc}}"
+      set: rtype_arg1
+    - match: \n
+      pop: true
+  rtype_arg1:
+    - match: "{{spc}}"
+      set: rtype_arg2
+    - match: \n
+      pop: true
+    - include: register
+  rtype_arg2:
+    - match: "{{spc}}"
+      set: rtype_arg3
+    - match: \n
+      pop: true
+    - include: register
+  rtype_arg3:
+    - match: "{{spc}}"
+      set: comment
+    - match: \n
+      pop: true
+    - include: register
+  itype_instruction:
+    - match: "{{spc}}"
+      set: itype_arg1
+    - match: \n
+      pop: true
+  itype_arg1:
+    - match: "{{spc}}"
+      set: itype_arg2
+    - match: \n
+      pop: true
+    - include: register
+  itype_arg2:
+    - match: "{{spc}}"
+      set: itype_arg3
+    - match: \n
+      pop: true
+    - include: register
+  itype_arg3:
+    - match: "{{spc}}"
+      set: comment
+    - match: \n
+      pop: true
+    - include: number
+    - include: label
+  jtype_instruction:
+    - match: "{{spc}}"
+      set: jtype_arg1
+    - match: \n
+      pop: true
+  jtype_arg1:
+    - match: "{{spc}}"
+      set: jtype_arg2
+    - match: \n
+      pop: true
+    - include: register
+  jtype_arg2:
+    - match: "{{spc}}"
+      set: comment
+    - match: \n
+      pop: true
+    - include: register
+  otype_instruction:
+    - match: "{{spc}}"
+      set: comment
+    - match: \n
+      pop: true
+  fill:
+    - match: "{{spc}}"
+      set: fill_arg1
+    - match: \n
+      pop: true
+  fill_arg1:
+    - match: "{{spc}}"
+      set: comment
+    - match: \n
+      pop: true
+    - include: number
+    - include: label
+
+    

@@ -1,0 +1,17 @@
+{
+	"scope": "source.lc2k",
+
+	"completions": [
+		"halt", 
+		"noop",
+
+		{ "trigger": "add", "contents": "add\t${1:regA}\t${2:regB}\t${3:destReg}" },
+		{ "trigger": "nor", "contents": "nor\t${1:regA}\t${2:regB}\t${3:destReg}" },
+
+		{ "trigger": "lw", "contents": "lw\t${1:regA}\t${2:regB}\t${3:offset|label}" },
+		{ "trigger": "sw", "contents": "sw\t${1:regA}\t${2:regB}\t${3:offset|label}" },
+		{ "trigger": "beq", "contents": "beq\t${1:regA}\t${2:regB}\t${3:offset|label}" },
+
+		{ "trigger": "jalr", "contents": "jalr\t${1:regA}\t${2:regB}" }
+	]
+}
