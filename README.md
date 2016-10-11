@@ -17,20 +17,23 @@ but not for LC-2K. So I decided to make one.
 
 **Note: This plugin has only been tested on [Sublime Text 3](https://www.sublimetext.com/3)**
 
-### Package Control (Recommended) (NOT CURRENTLY AVAILABLE)
+### Package Control (Recommended)
 
-Install [PackageControl](https://packagecontrol.io/).
-Then open the command palette (default keybinding: `Ctl+Shift+P` or `Cmd+Shift+P`), select `Package Control: Install Package` and choose `LC-2K Assembly`.
+**Note:** This method will not be available until the Package Control people approve
+this plugin. Use Manual for now.
 
-### Manual 
+~~Install [PackageControl](https://packagecontrol.io/installation).
+Then open the command palette (default keybinding: `Ctl+Shift+P` or `Cmd+Shift+P`), select `Package Control: Install Package` and choose `LC-2K Assembly`.~~
 
-Download the repo as a ZIP file and extract it to Sublime's Package Directory:
+### Manual (Not Recommended)
 
-**Linux:** `~/.config/sublime-text-3/Packages/User/`
+[Download the repo as a ZIP file](https://github.com/BGR360/lc2k-sublime-plugin/releases/latest) and extract it to Sublime's Package Directory:
 
-**OS X:** `/Users/<you>/Library/Application Support/Sublime Text 3/Packages/User/`
+**Linux:** `~/.config/sublime-text-3/Packages/User/LC-2K Assembly/`
 
-**Windows:** `AppData\Roaming\Sublime Text 3\Packages`
+**OS X:** `/Users/<you>/Library/Application Support/Sublime Text 3/Packages/User/LC-2K Assembly/`
+
+**Windows:** `AppData\Roaming\Sublime Text 3\Packages\LC-2K Assembly\`
 
 ## Features
 
