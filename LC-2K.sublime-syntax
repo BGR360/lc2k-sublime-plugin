@@ -12,19 +12,19 @@ variables:
   spc: "[^\\S\\n]+"
 contexts:
   main:
-    - match: "\\b(add|nor)"
+    - match: "\\b(add|nor)\\b"
       scope: keyword.control.instruction.lc2k
       push: rtype_instruction
-    - match: "\\b(lw|sw|beq)"
+    - match: "\\b(lw|sw|beq)\\b"
       scope: keyword.control.instruction.lc2k
       push: itype_instruction
-    - match: "\\b(jalr)"
+    - match: "\\b(jalr)\\b"
       scope: keyword.control.instruction.lc2k
       push: jtype_instruction
-    - match: "\\b(halt|noop)"
+    - match: "\\b(halt|noop)\\b"
       scope: keyword.control.instruction.lc2k
       push: otype_instruction
-    - match: "\\.fill"
+    - match: "\\.fill\\b"
       scope: keyword.control.directive.lc2k
       push: fill
     - include: label

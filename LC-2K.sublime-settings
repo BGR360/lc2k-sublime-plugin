@@ -1,5 +1,12 @@
 // These settings override both User and Default settings for the ase100 syntax
 {
 	// The number of spaces a tab is considered equal to
-	"tab_size": 8
+	"tab_size": 8,
+
+	// If translate_tabs_to_spaces is true, use_tab_stops will make tab and
+    // backspace insert/delete up to the next tabstop
+    "use_tab_stops": true,
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": false
 }
