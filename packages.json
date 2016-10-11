@@ -1,0 +1,18 @@
+{
+	"schema_version": "3.0.0",
+
+	"packages": [
+		{
+			"name": "LC-2K Assembly",
+			"details": "https://github.com/BGR360/lc2k-sublime-plugin",
+			"author": "Ben Reeves",
+			"labels": ["auto-complete", "language syntax"],
+			"releases": [
+				{
+					"sublime_text": "*",
+					"tags": true
+				}
+			]
+		}
+	]
+}
