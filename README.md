@@ -17,11 +17,12 @@ but not for LC-2K. So I decided to make one.
 
 **Note: This plugin has only been tested on [Sublime Text 3](https://www.sublimetext.com/3)**
 
-### Package Control (Recommended)
+### Package Control (Recommended) (NOT CURRENTLY AVAILABLE)
 
-TODO
+Install [PackageControl](https://packagecontrol.io/).
+Then open the command palette (default keybinding: `Ctl+Shift+P` or `Cmd+Shift+P`), select `Package Control: Install Package` and choose `LC-2K Assembly`.
 
-### Manual
+### Manual 
 
 Download the repo as a ZIP file and extract it to Sublime's Package Directory:
 
