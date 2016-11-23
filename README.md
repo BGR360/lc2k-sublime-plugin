@@ -13,6 +13,14 @@ the University of Michigan. Students also learn the popular [MIPS](https://en.wi
 There is already a [Sublime Text Plugin for the MIPS ISA](https://github.com/contradictioned/mips-syntax),
 but not for LC-2K. So I decided to make one.
 
+## Planned Features
+
+[Make a suggestion!](https://github.com/BGR360/lc2k-sublime-plugin/issues)
+
+- [x] Syntax Highlighting
+- [x] Instruction Autocompletion
+- [ ] LC-2K Quick-Reference
+
 ## Installation
 
 **Note: This plugin has only been tested on [Sublime Text 3](https://www.sublimetext.com/3)**
