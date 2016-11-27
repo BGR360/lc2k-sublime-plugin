@@ -27,11 +27,8 @@ but not for LC-2K. So I decided to make one.
 
 ### Package Control (Recommended)
 
-**Note:** This method will not be available until the Package Control people approve
-this plugin. Use Manual for now.
-
-~~Install [PackageControl](https://packagecontrol.io/installation).
-Then open the command palette (default keybinding: `Ctl+Shift+P` or `Cmd+Shift+P`), select `Package Control: Install Package` and choose `LC-2K Assembly`.~~
+Install [PackageControl](https://packagecontrol.io/installation).
+Then open the command palette (default keybinding: `Ctl+Shift+P` or `Cmd+Shift+P`), select `Package Control: Install Package` and choose `LC-2K Assembly`.
 
 ### Manual (Not Recommended)
 
